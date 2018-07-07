@@ -1,0 +1,21 @@
+{
+    "name": "Simple Youtube Downloader",
+    "description": "Download youtube videos simpler than before.",
+    "version": "0.1",
+    "author": "Salim Hossain",
+    "manifest_version": 2,
+    "web_accessible_resources": ["src/youtubedl.js"],
+    "content_scripts": [
+        {
+            "matches": ["https://www.youtube.com/watch*"],
+            "js": ["src/loader.js"],
+            "css": ["src/swaggify.css"]
+        }
+    ],
+    "permissions": [
+      "downloads"
+    ],
+    "background":{
+      "scripts": ["src/background.js"]
+    }
+}
